@@ -17,3 +17,50 @@
 .background{
     background-color: #FFF;
 }
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentLogo{
+    display: none
+}
+
+.contentLogo a{
+    font-weight: bold;
+    font-size: 31px;
+    color: #0f0f0fff;
+}
+
+.nav{
+    display: flex;
+    gap: 14px;
+
+    a{
+        color: #0f0f0fff;
+        font-weight: medium;
+        align-items: center;
+        padding: 8px 12px;
+        transition: all 0.6s;
+    }
+        a:hover{
+            font-weight: bold;
+            transform: scale(1.1);
+        }
+    
+}
+
+@media (min-width: 640){
+    .contentLogo{
+        display: flex;
+    }
+
+}
