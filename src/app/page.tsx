@@ -1,55 +1,16 @@
+import { json } from 'stream/consumers';
+import { Submenu } from './components/header/home/submenu';
 import './globals.css';
+import { getDataHome } from '@/utils/actions/get-data';
+import { HomeProps } from '@/utils/home.types';
 
-export default function Home() {
+export default async function Home() {
+  const data: HomeProps = await getDataHome();
+    console.log(JSON.stringify(data, null, 2));
   return (
-    <div >
-      <h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p><h1>Sua oficina</h1><br />
-      <p>Bem vindo ao site da sua oficina de confiança!</p>
-    </div>
+    
+    <main>
+      <Submenu />
+    </main>
   );
 }
