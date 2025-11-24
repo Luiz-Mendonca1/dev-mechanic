@@ -1,13 +1,14 @@
-import styles from './hero.module.css';
+import styles from './styles.module.css';
+import Image from 'next/image';
 
 interface HeroProps {
     heading: string;
-    buttoUrl: string;
+    buttonUrl: string;
     buttonTitle: string;
     bannerUrl: string;
 }
 
-export function Hero({  heading, buttoUrl, buttonTitle, bannerUrl }: HeroProps) {
+export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl }: HeroProps) {
     return (
         <main className={styles.main}>
             <div className={styles.containerHero}>
@@ -15,13 +16,21 @@ export function Hero({  heading, buttoUrl, buttonTitle, bannerUrl }: HeroProps) 
 
                 <a 
                 target='_blank'
-                href={buttoUrl}
+                href={buttonUrl}
                 className={styles.link}>
                     {buttonTitle}
                 </a>
             </div>
+            
             <div className={styles.contentBanner}>
-                {/*img*/}
+                <Image
+                    className={styles.banner}
+                    alt={heading}
+                    src={bannerUrl}
+                    priority={true}
+                    quality={100}
+                    fill={true}
+                    />
             </div>
         </main>
     );

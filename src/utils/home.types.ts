@@ -1,5 +1,5 @@
 export interface HomeProps {
-    objects:{
+    object:{
         slug: string;
         title: string;
         metadata: {
@@ -25,7 +25,7 @@ export interface HomeProps {
             };
         };
         
-    }[];
+    };
     };
 
 interface ServiceProps {
