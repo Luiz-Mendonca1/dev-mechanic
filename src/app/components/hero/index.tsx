@@ -25,7 +25,7 @@ export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl }: HeroProps)
             <div className={styles.contentBanner}>
                 <Image
                     className={styles.banner}
-                    alt={heading}
+                    alt={heading || "Banner de fundo da seção principal da Dev Mechanic"}
                     src={bannerUrl}
                     priority={true}
                     quality={100}
