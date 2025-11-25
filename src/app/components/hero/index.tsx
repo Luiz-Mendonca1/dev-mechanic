@@ -1,14 +1,17 @@
+import { Phone } from 'lucide-react';
 import styles from './styles.module.css';
 import Image from 'next/image';
+import React from 'react';
 
 interface HeroProps {
     heading: string;
     buttonUrl: string;
     buttonTitle: string;
     bannerUrl: string;
+    icon: React.ReactNode;
 }
 
-export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl }: HeroProps) {
+export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl, icon }: HeroProps) {
     return (
         <main className={styles.main}>
             <div className={styles.containerHero}>
@@ -17,7 +20,9 @@ export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl }: HeroProps)
                 <a 
                 target='_blank'
                 href={buttonUrl}
-                className={styles.link}>
+                className={styles.link}
+                >
+                    {icon}
                     {buttonTitle}
                 </a>
             </div>
@@ -25,7 +30,7 @@ export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl }: HeroProps)
             <div className={styles.contentBanner}>
                 <Image
                     className={styles.banner}
-                    alt={heading || "Banner de fundo da seção principal da Dev Mechanic"}
+                    alt={heading }
                     src={bannerUrl}
                     priority={true}
                     quality={100}

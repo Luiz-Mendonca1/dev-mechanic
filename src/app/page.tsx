@@ -4,6 +4,7 @@ import './globals.css';
 import { getDataHome } from '@/utils/actions/get-data';
 import { HomeProps } from '@/utils/home.types';
 import { Hero } from './components/hero';
+import {Phone} from 'lucide-react';
 
 export default async function Home() {
   const {object}: HomeProps = await getDataHome();
@@ -17,6 +18,8 @@ export default async function Home() {
         buttonUrl={object.metadata.cta_button.url}
         buttonTitle={object.metadata.cta_button.title}
         bannerUrl={object.metadata.banner.url}
+        icon={<Phone size={26} color='#FFF'/>}
+        
       />
     </main>
   );
