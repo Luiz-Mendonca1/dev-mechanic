@@ -1,4 +1,3 @@
-import { Phone } from 'lucide-react';
 import styles from './styles.module.css';
 import Image from 'next/image';
 import React from 'react';
