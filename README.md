@@ -4,4 +4,3 @@ link da Cosmic:
 [text](https://app.cosmicjs.com/)
 
 Imagens do projeto:
-![alt text](image.png)
