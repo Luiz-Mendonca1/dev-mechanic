@@ -22,6 +22,7 @@ export interface HomeProps {
         email: string;
         phone: string;
         address: string;
+        time: string;
       };
     };
   };
