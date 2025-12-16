@@ -14,8 +14,6 @@ interface SubMenuProp{
 export function Submenu({menu}: SubMenuProp) {
     const [isOpen, setIsOpen] = useState(false);
 
-    console.log(menu)
-
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth > 768) {
@@ -44,15 +42,13 @@ export function Submenu({menu}: SubMenuProp) {
                     </button>
                 )}
 
-                <li>
-                    <Link href="/">Home</Link>
-                </li>
-                <li>
-                    <Link href="/services">Serviços</Link>
-                </li>
-                <li>
-                    <Link href="/contacts">Contatos</Link>
-                </li>
+                {menu.objects.map(item=>(
+                    <li>
+                        <Link href={`/post/${item.slug}`}>
+                         {item.title}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </main>
     )
