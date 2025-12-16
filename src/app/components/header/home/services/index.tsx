@@ -26,7 +26,6 @@ export function Services({ object }: HomeProps) {
           <Image
             className={styles.imageAbout}
             alt="Imagem ilustrativa sobre a empresa"
-            quality={100}
             fill={true}
             src={object.metadata.about.banner.url}
           />
@@ -43,7 +42,6 @@ export function Services({ object }: HomeProps) {
                 <Image
                   className={styles.imageService}
                   alt={`Imagem do serviço ${service.description}`}
-                  quality={100}
                   fill={true}
                   src={service.image.url}
                 />

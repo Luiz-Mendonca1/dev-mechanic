@@ -5,9 +5,16 @@ import Styles from './styles.module.css';
 import Link from 'next/link';
 
 import { X, Menu } from 'lucide-react';
+import { MenuProps } from '@/utils/menu.types';
 
-export function Submenu() {
+interface SubMenuProp{
+    menu: MenuProps
+}
+
+export function Submenu({menu}: SubMenuProp) {
     const [isOpen, setIsOpen] = useState(false);
+
+    console.log(menu)
 
     useEffect(() => {
         const handleResize = () => {
