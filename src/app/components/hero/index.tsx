@@ -32,7 +32,6 @@ export function Hero({  heading, buttonUrl, buttonTitle, bannerUrl, icon }: Hero
                     alt={heading }
                     src={bannerUrl}
                     priority={true}
-                    quality={100}
                     fill={true}
                     />
             </div>

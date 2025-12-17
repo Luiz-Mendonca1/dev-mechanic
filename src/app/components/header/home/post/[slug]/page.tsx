@@ -1,8 +1,12 @@
 import styles from './styles.module.scss'
+import { getItemBySlug } from '@/utils/actions/get-data'
 
-export default function Page({params: {slug}}:{
+export default async function Page({params: {slug}}:{
     params:{slug:string}
 }){
+    const data = await getItemBySlug(slug)
+    console.log(JSON.stringify(data, null, 2))
+
     return(
         <div>
             <h1>Page test</h1>
