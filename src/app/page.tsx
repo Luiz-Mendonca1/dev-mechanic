@@ -26,7 +26,6 @@ export default async function Home() {
         buttonTitle={object.metadata.cta_button.title}
         bannerUrl={object.metadata.banner.url}
         icon={<Phone size={26} color='#FFF'/>}
-        
       />
 
       <Container>

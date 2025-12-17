@@ -1,0 +1,24 @@
+import { PostProps } from '@/utils/post.types'
+import styles from './styles.module.scss'
+import { getItemBySlug } from '@/utils/actions/get-data'
+import { Phone } from 'lucide-react'
+import { Hero } from '@/app/components/hero'
+
+export default async function Page({params: {slug}}:{
+    params:{slug:string}
+}){
+    const {objects}: PostProps = await getItemBySlug(slug)
+    console.log(JSON.stringify(objects, null, 2))
+
+    return(
+        <>
+            <Hero 
+                heading={objects[0].title}
+                buttonUrl={objects[0].metadata.button.title}
+                buttonTitle={objects[0].metadata.button.url}
+                bannerUrl={objects[0].metadata.button.url}
+                icon={<Phone size={26} color='#FFF'/>}
+            />
+        </>
+    )
+}

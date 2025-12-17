@@ -10,6 +10,7 @@ export default async function Page({params: {slug}}:{
     return(
         <div>
             <h1>Page test</h1>
+            <h1>{slug}</h1>
         </div>
     )
 }
