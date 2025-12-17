@@ -5,7 +5,7 @@ import Styles from './styles.module.css';
 import Link from 'next/link';
 
 import { X, Menu } from 'lucide-react';
-import { MenuProps } from '@/utils/menu.types';
+import { MenuProps } from '@/app/utils/menu.types';
 
 interface SubMenuProp{
     menu: MenuProps

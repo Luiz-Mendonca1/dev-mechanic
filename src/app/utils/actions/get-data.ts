@@ -46,18 +46,18 @@ export async function getItemBySlug(itemSlug:string) {
 
   const url = `${baseUrl}?${queryParams.toString()}`
 
-try{
+  try{
 
-  const res = await fetch(url, {next:{revalidate:120}})
+    const res = await fetch(url, {next:{revalidate:120}})
 
-  if(!res.ok){
+    if(!res.ok){
+      throw new Error('Failed get item by slug')
+    }
+
+    return res.json()
+
+  }catch(err){
     throw new Error('Failed get item by slug')
   }
-
-  return res.json()
-
-}catch(err){
-  throw new Error('Failed get item by slug')
-}
 
 }

@@ -1,14 +1,14 @@
 import { json } from 'stream/consumers';
 import { Submenu } from './components/header/home/submenu';
 import './globals.css';
-import { getDataHome, getSubMenu } from '@/utils/actions/get-data';
-import { HomeProps } from '@/utils/home.types';
+import { getDataHome, getSubMenu } from './utils/actions/get-data';
+import { HomeProps } from './utils/home.types';
 import { Hero } from './components/hero';
 import {Phone} from 'lucide-react';
 import { Services } from './components/header/home/services';
 import { Container } from './components/container';
 import Footer from './components/header/home/footer';
-import { MenuProps } from '@/utils/menu.types';
+import { MenuProps } from './utils/menu.types';
 
 export default async function Home() {
   const {object}: HomeProps = await getDataHome();

@@ -1,4 +1,4 @@
-import { HomeProps } from "@/utils/home.types";
+import { HomeProps } from "@/app/utils/home.types";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 
