@@ -1,6 +1,5 @@
 import { json } from 'stream/consumers';
 import { Submenu } from './components/header/home/submenu';
-import './globals.css';
 import { getDataHome, getSubMenu } from './utils/actions/get-data';
 import { HomeProps } from './utils/home.types';
 import { Hero } from './components/hero';
