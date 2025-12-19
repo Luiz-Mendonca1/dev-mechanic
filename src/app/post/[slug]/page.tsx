@@ -51,6 +51,7 @@ export default async function Page({ params }: {
                             alt={objects[0].title}
                             fill={true}
                             src={objects[0].metadata.description.banner.url}
+                            sizes='(max-width: 480px) 100vw, (max-width:1024px) 75vw, 60vw'
                             />
                     </div>
                 </section>
