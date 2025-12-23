@@ -1,4 +1,4 @@
-projeto de estudo para criação de  site usando React e criação de de API atraves da Cosmicjs
+projeto de estudo para criação de  site usando React e criação de de API atraves da Cosmicjs focado na tematica de Mecânica automotiva
 
 link da Cosmicjs:
 [text](https://app.cosmicjs.com/)
