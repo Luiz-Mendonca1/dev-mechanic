@@ -1,5 +1,6 @@
 import { Hero } from "@/app/components/hero";
-import { Container, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import { Container } from "@/app/components/container";
 import Image from "next/image";
 import styles from './content.module.css';
 import { PostProps } from "@/app/utils/post.types";
