@@ -45,7 +45,7 @@ export default function RootLayout({
         <Header/>
         {children}
         <p style={{textAlign:'center', marginTop:54, marginBottom: 24}}>
-          Todos direitos reservados @<Link href='https://github.com/Luiz-Mendonca1' style={{color: 'black'}}>Luiz-Mendonca1</Link> {`${new Date().getFullYear()}`}
+          Todos direitos reservados @<Link href='https://github.com/Luiz-Mendonca1' style={{color: 'blue'}}>Luiz-Mendonca1</Link> {`${new Date().getFullYear()}`}
         </p>
       </body>
     </html>
