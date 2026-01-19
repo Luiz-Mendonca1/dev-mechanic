@@ -35,7 +35,7 @@ export default function Footer({object}:HomeProps){
                         <div className={styles.item}>
                             <Clock size={28} color="#FFF"/>
                             <div>
-                                <strong>Endereço</strong>
+                                <strong>Horário</strong>
                                 <p>{object.metadata.contact.time}</p>
                             </div>
                         </div>
