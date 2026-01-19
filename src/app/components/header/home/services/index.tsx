@@ -3,21 +3,20 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 
 export function Services({ object }: HomeProps) {
-  // Acedemos ao primeiro (e único) objeto do array de serviços
   const rawService = object.metadata.services[0] || {};
 
-  // Normalizamos os dados para um array limpo que o React possa iterar facilmente
   const normalizedServices = [
     { image: rawService.image, description: rawService.description },
     { image: rawService.image1, description: rawService.description1 },
     { image: rawService.image2, description: rawService.description2 },
     { image: rawService.image3, description: rawService.description3 },
-  ].filter((item) => item.image && item.description); // Filtramos itens vazios caso a API não envie todos
+  ].filter((item) => item.image && item.description);
 
   return (
     <>
       <section className={styles.containerAbout}>
-        <article className={styles.innerAbout}>
+         {/* ... (código da seção sobre mantido igual) ... */}
+         <article className={styles.innerAbout}>
           <h1 className={styles.title}>Sobre</h1>
           <p>{object.metadata.about.description}</p>
         </article>
@@ -32,7 +31,7 @@ export function Services({ object }: HomeProps) {
         </div>
       </section>
 
-      <h2 className={styles.servicesTitle}>Conheça nossos serviços</h2>
+      <h2 id="servicos" className={styles.servicesTitle}>Conheça nossos serviços</h2>
 
       <section className={styles.services}>
         {normalizedServices.map((service, index) => (
